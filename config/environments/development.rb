@@ -34,7 +34,7 @@ LearnRails::Application.configure do
     authentication: "plain",
     enable_starttls_auto: true,
     user_name: ENV["GMAIL_USERNAME"],
-    password: ENv["GMAIL_PASSWORD"]
+    password: ENV["GMAIL_PASSWORD"]
   }
 
   #send email in development mode
