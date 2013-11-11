@@ -4,3 +4,8 @@
 <p>Only <%= @owner.countdown %> days till my next birthday.</p>
 <p>That is about <%= @owner.months_till %> months.</p>
 <p>That is about <%= @owner.hours_till %> hours or about <%= @owner.minutes_till %> minutes or about <%= @owner.seconds_till %> seconds</p>
+<% content_for :sidebar do %>
+  <h3>Contact Info</h3>
+  <p>Email: me@example.com</p>
+<% end %>
+ 

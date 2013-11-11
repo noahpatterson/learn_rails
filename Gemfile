@@ -38,6 +38,7 @@ gem 'google_drive'
 gem 'high_voltage'
 gem 'simple_form'
 gem 'zurb-foundation'
+gem 'puma'
 
 group :development do 
 	gem 'better_errors'
