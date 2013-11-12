@@ -26,7 +26,7 @@ class Owner
 
 	def hours_till
 		time = Time.now
-		hours = (24 - time.hour) + ((countdown - 1) * 24)
+		hours = (24 - time.hour) + ((countdown - 1)  * 24)
 	end
 
 	def minutes_till
