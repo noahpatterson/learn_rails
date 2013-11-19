@@ -14,8 +14,10 @@ class ContactsController < ApplicationController
 		@contact = Contact.new(secure_params)
 		if @contact.valid?
 			#todo save data
+			@contact.update_spreadsheet
 			#todo send message
 			flash[:notice] = "Message sent from #{@contact.name}"
+			# flash[:notice] = "Message sent to Google Drive"
 			redirect_to root_path
 		else
 			render :new
