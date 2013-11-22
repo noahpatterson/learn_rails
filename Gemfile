@@ -40,6 +40,11 @@ gem 'simple_form'
 gem 'zurb-foundation'
 gem 'puma'
 
+#async mailer
+gem 'sidekiq'
+gem 'sinatra', require: false
+gem 'slim'
+
 group :development do 
 	gem 'better_errors'
 	gem 'quiet_assets'

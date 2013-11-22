@@ -16,8 +16,10 @@ class ContactsController < ApplicationController
 			#todo save data
 			@contact.update_spreadsheet
 			#todo send message
+			# UserMailer.contact_email(@contact).deliver
+			MailWorker.perform_async(@contact.as_json)
 			flash[:notice] = "Message sent from #{@contact.name}"
-			# flash[:notice] = "Message sent to Google Drive"
+			# usflash[:notice] = "Message sent to Google Drive"
 			redirect_to root_path
 		else
 			render :new
