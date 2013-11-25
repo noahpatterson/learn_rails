@@ -17,4 +17,7 @@
 //= require_tree .
 $(function() {
   $(document).foundation();
+  // $('#new_contact').submit(function(){
+  // 	$('.loader').fadeIn();
+  // });
 });

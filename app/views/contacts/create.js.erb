@@ -1,5 +1,20 @@
+function resetForm($form) {
+    $form.find('input[type="text"], input[type="password"], input[type="file"], select, textarea, input[type="email"]').val('');
+    $form.find('input[type="radio"], input[type="checkbox"]').removeAttr('checked').removeAttr('selected');
 
+}
+function clearErrors($form) {
+	$form.find('div').removeClass('error');
+	$form.find('div small').remove();
+	$form.find('.alert').remove();
+}
+// $('.loader').fadeOut();
+resetForm($('#new_contact'));
+clearErrors($('#new_contact'));
+// $("main div").html("<%= escape_javascript(render :partial => 'contacts/form') %>");
 $('h3').before("<div data-alert='' class='alert-box round success'><div>Message sent from  <%= @contact.email %> </div><a href='#' class='close'>×</a></div>");
-$('.form form').trigger('reset');
+
+
+
 
 
